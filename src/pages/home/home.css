@@ -1,11 +1,33 @@
-h1 {
+h1 , h2 {
     text-align: center;
+    color: aqua;
+}
+
+h1 {
+    font-size: 48px;
+    margin-top: 24px;
 }
 
 a {
+    font-size: 24px;
+    color: aqua;
     display: flex;
     justify-content: center;
     text-decoration: none;
     font-weight: bold;
     font-family: sans-serif;
+    transition: 0.4s;
+    margin-bottom: 24px;
+    &:hover {
+        color:azure
+    }
+}
+
+.logo-flex {
+    display: flex;
+    justify-content: center;
+}
+
+.logo-flex > img {
+    margin: 20px 0;
 }

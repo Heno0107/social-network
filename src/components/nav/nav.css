@@ -1,0 +1,24 @@
+nav {
+    background-color: black;
+    padding: 20px 32px;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.nav-logo {
+    width: 80px;
+    background-color: aqua;
+    padding: 12px;
+    border-radius: 50%;
+}
+
+.login {
+    all: unset;
+    background-color: black;
+    color: aqua;
+    font-size: 20px;
+    cursor: pointer;
+}

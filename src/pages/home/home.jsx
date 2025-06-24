@@ -1,12 +1,18 @@
 import { NavLink } from 'react-router-dom'
 
+import logo from '../../assets/logo/social-logo.png'
+
 import './home.css'
 
 export function Home () {
     return (
         <>
-        <h1>HOME</h1>
-        <NavLink to={'/users'}>USERS</NavLink>
+        <h1>SOCIAL NETWORK</h1>
+        <h2>WELCOME !</h2>
+        <div className='logo-flex'>
+            <img src={logo}/>
+        </div>
+        <NavLink to={'/users'}>See Users</NavLink>
         </>
     )
 }

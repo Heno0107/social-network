@@ -1,0 +1,9 @@
+footer {
+    background-color: black;
+    padding: 32px 0;
+    color: darkgray;
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    font-family: sans-serif;
+}

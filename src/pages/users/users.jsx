@@ -3,9 +3,10 @@ import { useDispatch, useSelector } from 'react-redux'
 
 import socialAPI from '../../api/api'
 import { getUsersAC } from '../../store/reducers/userReducer'
-import profile from '../../assets/profile'
+import { User } from '../../components'
 
 import './users.css'
+
 
 export function Users () {
     const dispatch = useDispatch()
@@ -18,15 +19,14 @@ export function Users () {
     } , [])
 
     return (
-        <div className="users">
-            {
-                users.items.map((user) => {
-                    return <div className="user">
-                        <img src={user.photos.large ? user.photos.large : profile}></img>
-                        <h2>@{user.name}</h2>
-                    </div>
-                })
-            }
+        <div className="users-container">
+            <div className="users">
+                {
+                    users.items?.map((user) => {
+                        return <User key = {user.id} user = {user}/>
+                    })
+                }
+            </div>
         </div>
     )
 }

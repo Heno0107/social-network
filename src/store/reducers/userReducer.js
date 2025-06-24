@@ -17,4 +17,5 @@ const usersReducer = (state = initState, action) => {
 }
 
 export const getUsersAC = (data) => ({type : GET_USERS , payload : {data}})
+
 export default usersReducer

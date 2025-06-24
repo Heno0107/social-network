@@ -1,21 +1,11 @@
-.user img {
-    max-width: 200px;
-}
-
-.user h2 {
-    color: blue;
-    transition: 0.4s;
-    &:hover {
-        color: black;
-    }
-}
-
 .users {
     display: grid;
     grid-template-columns: repeat(4 , 1fr);
     gap: 12px;
+    padding: 32px 0;
 }
 
-.user {
-    background-color: white
+.users-container {
+    max-width: 1240px;
+    margin: 0 auto;
 }
