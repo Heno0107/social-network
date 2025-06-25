@@ -9,3 +9,8 @@
     max-width: 1240px;
     margin: 0 auto;
 }
+
+.loading {
+    color: aqua;
+    font-size: 40px;
+}
