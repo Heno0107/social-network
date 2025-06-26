@@ -21,18 +21,18 @@ const usersReducer = (state = initState, action) => {
                 isFetching : action.payload
             }
         default :
-        return state
+            return state
     }
 }
 
 const getUsersAC = (data) => ({type : GET_USERS , payload : {data}})
 const isFetchingAC = (bool) => ({type : IS_FETCHING , payload : bool})
 
-export const getUsersTC = () => {
+export const getUsersTC = (page) => {
     return (dispatch) => {
         dispatch(isFetchingAC(true))
 
-        socialAPI.getUsers()
+        socialAPI.getUsers(page)
         .then((res) => {
           dispatch(getUsersAC(res.data))
           dispatch(isFetchingAC(false))

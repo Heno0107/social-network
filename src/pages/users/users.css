@@ -14,3 +14,11 @@
     color: aqua;
     font-size: 40px;
 }
+
+.pages {
+    margin: 20px auto;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(12 , 1fr);
+    gap: 8px;
+}

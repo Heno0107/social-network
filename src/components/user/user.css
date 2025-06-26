@@ -3,6 +3,7 @@
 }
 
 .user h2 {
+    margin: 12px 0;
     font-family: sans-serif;
     color: aqua;
     transition: 0.4s;
@@ -31,4 +32,10 @@
     color: white;
     font-family: sans-serif;
     text-align: center;
+    max-width: 240px;
+}
+
+.user > a {
+    all: unset;
+    cursor: pointer;
 }
