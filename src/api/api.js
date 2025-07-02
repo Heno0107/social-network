@@ -10,6 +10,9 @@ const socialAPI = {
     } ,
     getProfile(id){
         return instance.get(`/profile/${id}`)
+    } ,
+    login(body = {}){
+        return instance.post(`/auth/login` , body)
     }
 }
 

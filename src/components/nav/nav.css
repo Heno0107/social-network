@@ -3,6 +3,7 @@ nav {
     padding: 20px 32px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     position: sticky;
     top: 0;
     z-index: 999;
@@ -16,6 +17,14 @@ nav {
 }
 
 .login {
+    all: unset;
+    background-color: black;
+    color: aqua;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.profileLink {
     all: unset;
     background-color: black;
     color: aqua;

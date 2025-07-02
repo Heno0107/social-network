@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getUsersTC } from '../../store/reducers/userReducer'
 import { User } from '../../components'
@@ -6,6 +6,9 @@ import { User } from '../../components'
 import './users.css'
 
 export function Users () {
+    const [start , setStart] = useState(0)
+    const [end , setEnd] = useState(10)
+ 
     const dispatch = useDispatch()
 
     const {users , isFetching} = useSelector((state) => state.usersPage)
@@ -25,16 +28,33 @@ export function Users () {
         dispatch(getUsersTC(page))
     }
 
+    const nextPage = () => {
+        if(end < totalPagesCount - 10){
+            setStart(start + 10)
+            setEnd(end + 10)
+            console.log(start , end)
+        } else {
+            setStart(start + 10)
+            setEnd(totalPagesCount)
+        }
+    }
+
+    const prevPage = () => {
+        if(start != 0) {
+            setStart(start -  10)
+            setEnd(end - 10)
+        }
+    }
+
     return (
         <div className="users-container">
             <div className="pages">
-                <button>Back</button>
-                {
-                    pages.map((p) => {
-                        return <button key = {p} className='pageBtn' onClick={() => changePage(p)}>{p}</button>
-                    })
+                <button onClick={prevPage}>Back</button>
+                {pages.slice(start , end).map((p) => {
+                         return <button key = {p} className='pageBtn' onClick={() => changePage(p)}>{p}</button>
+                     })
                 }
-                <button>Next</button>
+                <button onClick={nextPage}>Next</button>
             </div>
 
             <div className="users">
